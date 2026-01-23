@@ -29,7 +29,6 @@ export const navLinks = [
   { name: "Contact", href: "#contact" },
 ];
 
-export const education = []; // Empty as requested to remove section
 
 export const skills = [
   {
@@ -61,7 +60,7 @@ export const projects = [
     description:
       "Students can register and check approval status, Campus Admins manage their own campus students, and the Superadmin oversees all campuses and admins. The app features login, signup, and a clean, responsive UI.",
     tech: ["HTML", "CSS", "Javascript", "Supabase"],
-    image: "/public/std.png",
+    image: "/std.png",
     liveUrl: "https://owaisraza72.github.io/Student-Management-System-/",
     githubUrl: "https://github.com/owaisraza72/Student-Management-System-",
   },
@@ -70,7 +69,7 @@ export const projects = [
     description:
       "Pitch Craft is a complete frontend web application developed during a hackathon and present project ideas through a modern and responsive interface.",
     tech: ["React", "Tailwind CSS", "Supabase"],
-    image: "/public/pitch.png",
+    image: "/pitch.png",
     liveUrl: "https://frontend-hackathoon.vercel.app/",
     githubUrl: "https://github.com/owaisraza72/Frontend-Hackathoon",
   },
@@ -79,7 +78,7 @@ export const projects = [
     description:
       "E-Commerce Web Application built with Next.js and Tailwind CSS.",
     tech: ["Next.Js", "Tailwind CSS", "App Routes"],
-    image: "/public/rz.png",
+    image: "/rz.png",
     liveUrl: "#",
     githubUrl: "https://github.com/owaisraza72",
   },

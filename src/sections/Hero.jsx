@@ -192,7 +192,7 @@ export default function Hero() {
                 className="relative z-10 aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-2xl bg-gradient-to-br from-primary-500/10 to-cyan-500/10"
               >
                 <img
-                  src="/public/picture.png"
+                  src="/picture.png"
                   alt="Profile"
                   className="w-full h-full object-cover"
                 />
