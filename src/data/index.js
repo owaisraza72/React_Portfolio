@@ -18,7 +18,7 @@ export const personalInfo = {
   github: "https://github.com/owaisraza72",
   linkedin: "https://linkedin.com/in/owais-raza-a439b033b",
   resume:
-    "https://drive.google.com/file/d/1964mKPZpjSESQGvVCdSh0CpEkUcUX7LG/view?usp=sharing", // Placeholder
+    "https://drive.google.com/file/d/1fK40-24C38xlLb4BjTlGZ1sPrJmAirwV/view?usp=sharing", // Placeholder
 };
 
 export const navLinks = [
@@ -28,7 +28,6 @@ export const navLinks = [
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
 ];
-
 
 export const skills = [
   {
