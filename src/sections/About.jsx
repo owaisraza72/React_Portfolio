@@ -24,7 +24,7 @@ export default function About() {
         </motion.div>
 
         {/* Image + Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
           {/* Left Column: Image */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}

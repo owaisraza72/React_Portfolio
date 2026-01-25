@@ -125,12 +125,13 @@ export default function Contact() {
             <motion.div variants={fadeInUp} className="space-y-6">
               <div className="group">
                 <a
-                  href={`mailto:${personalInfo.email}`}
+                  href={`${personalInfo.email}`}
                   className="flex items-center gap-4 p-6 rounded-2xl 
-               bg-white/5 hover:bg-white/10 
-               border border-white/10 hover:border-primary-500/30 
-               transition-all duration-300 
-               hover:scale-[1.02]"
+                 bg-white/5 hover:bg-white/10 
+                 border border-white/10 hover:border-primary-500/30 
+                 transition-all duration-300 
+                 hover:scale-[1.02]"  
+                  target="_blank"
                 >
                   {/* Icon */}
                   <div

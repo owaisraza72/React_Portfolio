@@ -92,7 +92,7 @@ export default function Projects() {
               {/* Project Card */}
               <div className="h-full flex flex-col bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl overflow-hidden hover:border-primary-500/30 hover:shadow-2xl hover:shadow-primary-500/10 transition-all duration-300">
                 {/* Image Container */}
-                <div className="relative h-64 md:h-72 overflow-hidden">
+                <div className="relative h-64 md:h-70 overflow-hidden">
                   <img
                     src={project.image}
                     alt={project.title}

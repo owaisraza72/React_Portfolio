@@ -14,7 +14,7 @@ export const personalInfo = {
   title: "Frontend Web Developer",
   summary:
     "Frontend Web Developer with strong skills in building modern, responsive web applications using HTML, CSS, JavaScript, and React. Currently expanding into MERN stack development, with hands-on experience in Node.js, Express, MongoDB, and basic Next.js app routing and API routes.",
-  email: "owaisrazax.dev@gmail.com",
+  email: "https://mail.google.com/mail/?view=cm&fs=1&to=owaisrazax.dev@gmail.com",
   github: "https://github.com/owaisraza72",
   linkedin: "https://linkedin.com/in/owais-raza-a439b033b",
   resume:

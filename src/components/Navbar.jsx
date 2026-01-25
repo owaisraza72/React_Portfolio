@@ -54,6 +54,19 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Prevent body scrolling when menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
+
+    return () => {
+      document.body.style.overflow = "unset";
+    };
+  }, [isOpen]);
+
   const menuVariants = {
     closed: {
       opacity: 0,
@@ -218,7 +231,7 @@ export default function Navbar() {
             whileHover={{ scale: 1.1 }}
             whileTap={{ scale: 0.9 }}
             onClick={() => setIsOpen(!isOpen)}
-            className="lg:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-primary-500/30 transition-all"
+            className="lg:hidden w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-white hover:border-primary-500/30 transition-all relative z-[70]"
           >
             {isOpen ? <X size={20} /> : <Menu size={20} />}
           </motion.button>
@@ -233,114 +246,115 @@ export default function Navbar() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 bg-dark-900/95 backdrop-blur-xl z-40 pt-20 lg:hidden"
+            className="fixed inset-0 bg-black/95 backdrop-blur-xl z-[60] pt-20 lg:hidden"
+            style={{
+              position: "fixed",
+              top: 0,
+              left: 0,
+              right: 0,
+              bottom: 0,
+              height: "100vh",
+              overflowY: "auto",
+            }}
           >
-            {/* Close button */}
-            <motion.button
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.1 }}
-              onClick={() => setIsOpen(false)}
-              className="absolute top-6 right-6 w-10 h-10 rounded-lg bg-white/10 border border-white/10 flex items-center justify-center text-white"
-            >
-              <X size={18} />
-            </motion.button>
-
             <motion.div
               variants={menuVariants}
               initial="closed"
               animate="open"
               exit="closed"
-              className="px-6 py-8"
+              className="px-6 py-8 h-full overflow-y-auto pb-20"
             >
-              {navLinks.map((link) => (
-                <motion.a
-                  key={link.name}
-                  href={link.href}
-                  variants={menuItemVariants}
-                  whileHover={{ x: 10 }}
-                  whileTap={{ scale: 0.95 }}
-                  onClick={() => setIsOpen(false)}
-                  className={clsx(
-                    "flex items-center justify-between py-3.5 px-5 rounded-lg mb-2 transition-all group",
-                    activeSection === link.href.replace("#", "")
-                      ? "bg-gradient-to-r from-primary-500/20 to-cyan-500/20 text-white border border-primary-500/30"
-                      : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10",
-                  )}
-                >
-                  <div className="flex items-center gap-3">
-                    <div
-                      className={clsx(
-                        "p-1.5 rounded-md transition-colors",
-                        activeSection === link.href.replace("#", "")
-                          ? "bg-primary-500/30 text-primary-300"
-                          : "bg-white/5 text-slate-400 group-hover:text-primary-400",
-                      )}
-                    >
-                      {navIcons[link.href.replace("#", "")] || (
-                        <Home size={18} />
-                      )}
-                    </div>
-                    <span className="font-medium">{link.name}</span>
-                  </div>
-                  <ChevronRight
-                    className="text-slate-500 group-hover:text-white"
-                    size={18}
-                  />
-                </motion.a>
-              ))}
-
-              {/* Mobile Social Links */}
-              <motion.div
-                variants={menuItemVariants}
-                className="flex items-center gap-3 justify-center mt-10 pt-8 border-t border-white/10"
-              >
-                {[
-                  {
-                    icon: <Github size={18} />,
-                    href: personalInfo.github,
-                    color: "hover:text-white",
-                  },
-                  {
-                    icon: <Linkedin size={18} />,
-                    href: personalInfo.linkedin,
-                    color: "hover:text-blue-400",
-                  },
-                  {
-                    icon: <Mail size={18} />,
-                    href: `mailto:${personalInfo.email}`,
-                    color: "hover:text-primary-400",
-                  },
-                ].map(
-                  (social, idx) =>
-                    social.href && (
-                      <motion.a
-                        key={idx}
-                        href={social.href}
-                        target={idx !== 2 ? "_blank" : undefined}
-                        rel="noopener noreferrer"
-                        whileHover={{ scale: 1.1, y: -2 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 transition-all"
+              <div className="max-w-md mx-auto">
+                {navLinks.map((link) => (
+                  <motion.a
+                    key={link.name}
+                    href={link.href}
+                    variants={menuItemVariants}
+                    whileHover={{ x: 10 }}
+                    whileTap={{ scale: 0.95 }}
+                    onClick={() => setIsOpen(false)}
+                    className={clsx(
+                      "flex items-center justify-between py-3.5 px-5 rounded-lg mb-2 transition-all group",
+                      activeSection === link.href.replace("#", "")
+                        ? "bg-gradient-to-r from-primary-500/20 to-cyan-500/20 text-white border border-primary-500/30"
+                        : "bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white border border-white/10",
+                    )}
+                  >
+                    <div className="flex items-center gap-3">
+                      <div
+                        className={clsx(
+                          "p-1.5 rounded-md transition-colors",
+                          activeSection === link.href.replace("#", "")
+                            ? "bg-primary-500/30 text-primary-300"
+                            : "bg-white/5 text-slate-400 group-hover:text-primary-400",
+                        )}
                       >
-                        {social.icon}
-                      </motion.a>
-                    ),
-                )}
-              </motion.div>
+                        {navIcons[link.href.replace("#", "")] || (
+                          <Home size={18} />
+                        )}
+                      </div>
+                      <span className="font-medium">{link.name}</span>
+                    </div>
+                    <ChevronRight
+                      className="text-slate-500 group-hover:text-white"
+                      size={18}
+                    />
+                  </motion.a>
+                ))}
 
-              {/* Mobile CTA Button */}
-              <motion.div variants={menuItemVariants} className="mt-6">
-                <motion.a
-                  href="#contact"
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full py-3.5 bg-gradient-to-r from-primary-500 to-cyan-500 text-white font-bold rounded-lg text-center hover:shadow-lg hover:shadow-primary-500/25 transition-all border border-white/10"
+                {/* Mobile Social Links */}
+                <motion.div
+                  variants={menuItemVariants}
+                  className="flex items-center gap-3 justify-center mt-10 pt-8 border-t border-white/10"
                 >
-                  Get in Touch
-                </motion.a>
-              </motion.div>
+                  {[
+                    {
+                      icon: <Github size={18} />,
+                      href: personalInfo.github,
+                      color: "hover:text-white",
+                    },
+                    {
+                      icon: <Linkedin size={18} />,
+                      href: personalInfo.linkedin,
+                      color: "hover:text-blue-400",
+                    },
+                    {
+                      icon: <Mail size={18} />,
+                      href: `mailto:${personalInfo.email}`,
+                      color: "hover:text-primary-400",
+                    },
+                  ].map(
+                    (social, idx) =>
+                      social.href && (
+                        <motion.a
+                          key={idx}
+                          href={social.href}
+                          target={idx !== 2 ? "_blank" : undefined}
+                          rel="noopener noreferrer"
+                          whileHover={{ scale: 1.1, y: -2 }}
+                          whileTap={{ scale: 0.95 }}
+                          onClick={() => setIsOpen(false)}
+                          className="w-10 h-10 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-slate-300 transition-all"
+                        >
+                          {social.icon}
+                        </motion.a>
+                      ),
+                  )}
+                </motion.div>
+
+                {/* Mobile CTA Button */}
+                <motion.div variants={menuItemVariants} className="mt-6 mb-8">
+                  <motion.a
+                    href="#contact"
+                    whileHover={{ scale: 1.02 }}
+                    whileTap={{ scale: 0.98 }}
+                    onClick={() => setIsOpen(false)}
+                    className="block w-full py-3.5 bg-gradient-to-r from-primary-500 to-cyan-500 text-white font-bold rounded-lg text-center hover:shadow-lg hover:shadow-primary-500/25 transition-all border border-white/10"
+                  >
+                    Get in Touch
+                  </motion.a>
+                </motion.div>
+              </div>
             </motion.div>
           </motion.div>
         )}

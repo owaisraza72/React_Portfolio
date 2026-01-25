@@ -112,7 +112,7 @@ export default function Hero() {
               className="flex flex-wrap gap-4 items-center"
             >
               <motion.a
-                href={`https://mail.google.com/mail/?view=cm&fs=1&to=${personalInfo.email}`}
+                href={`${personalInfo.email}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileTap={{ scale: 0.95 }}
