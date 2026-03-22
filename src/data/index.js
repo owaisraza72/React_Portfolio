@@ -5,20 +5,24 @@ import {
   Code2,
   Palette,
   Terminal,
+  Wrench,
   Twitter,
+  Database,
   ExternalLink,
 } from "lucide-react";
 
 export const personalInfo = {
   name: "Owais Raza",
-  title: "Frontend Web Developer",
+  title: "Full Stack Developer",
   summary:
-    "Frontend Web Developer with strong skills in building modern, responsive web applications using HTML, CSS, JavaScript, and React. Currently expanding into MERN stack development, with hands-on experience in Node.js, Express, MongoDB, and basic Next.js app routing and API routes.",
-  email: "https://mail.google.com/mail/?view=cm&fs=1&to=owaisrazax.dev@gmail.com",
+    "Full Stack Developer specializing in the MERN stack. I build scalable, high-performance web applications using React, Next.js, and Node.js, with a focus on clean architecture and robust API integration.",
+  email:
+    "https://mail.google.com/mail/?view=cm&fs=1&to=owaisrazax.dev@gmail.com",
+  whatsapp: "https://wa.me/92308368390?text=Hello%21%20I%20want%20to%20hire%20you.",
   github: "https://github.com/owaisraza72",
   linkedin: "https://linkedin.com/in/owais-raza-a439b033b",
   resume:
-    "https://drive.google.com/file/d/1fK40-24C38xlLb4BjTlGZ1sPrJmAirwV/view?usp=sharing", // Placeholder
+    "https://drive.google.com/file/d/1eAl0FQsQr7-EaC9-n1vP0aijszf7ndMa/view?usp=sharing",
 };
 
 export const navLinks = [
@@ -31,54 +35,72 @@ export const navLinks = [
 
 export const skills = [
   {
-    category: "Core Frontend",
+    category: "Frontend",
     icon: Code2,
-    items: ["HTML5", "CSS3", "JavaScript (ES6+)", "React.js", "Next.js"],
-  },
-  {
-    category: "Tools & Styling",
-    icon: Palette,
     items: [
+      "React.js",
+      "Next.js",
+      "JavaScript (ES6+)",
       "Tailwind CSS",
-      "Ant Design",
-      "Bootstrap",
-      "Git & GitHub",
-      "VS Code",
+      "HTML5 & CSS3",
     ],
   },
   {
     category: "Backend",
     icon: Terminal,
-    items: ["Node.js", "Express.js", "MongoDB", "Supabase", "Json Web Token"],
+    items: [
+      "Node.js",
+      "Express.js",
+      "REST API Development",
+      "JWT Authentication",
+      "API Integration",
+    ],
+  },
+  {
+    category: "Database & Cloud",
+    icon: Database,
+    items: ["MongoDB", "Supabase", "Cloudinary", "Docker"],
+  },
+  {
+    category: "Deployment & Tools",
+    icon: Wrench,
+    items: ["Vercel","Railway","Git & GitHub", "Postman", "VS Code"],
   },
 ];
-
 export const projects = [
   {
-    title: "Student Management System",
+    title: "Elegance Luxury",
     description:
-      "Students can register and check approval status, Campus Admins manage their own campus students, and the Superadmin oversees all campuses and admins. The app features login, signup, and a clean, responsive UI.",
-    tech: ["HTML", "CSS", "Javascript", "Supabase"],
-    image: "/std.png",
-    liveUrl: "https://owaisraza72.github.io/Student-Management-System-/",
-    githubUrl: "https://github.com/owaisraza72/Student-Management-System-",
+      "Developed a scalable MERN stack e-commerce platform for luxury products with user authentication, API-driven architecture, and dynamic product management. Focused on clean code structure, reusable components, and optimized performance across both frontend and backend.",
+    tech: [
+      "MongoDB",
+      "Express.js",
+      "React.js",
+      "Node.js",
+      "Tailwind CSS",
+      "JWT Authentication",
+      "REST APIs",
+    ],
+    image: "/ecom.png",
+    liveUrl: "https://elegance-luxury.vercel.app/",
+    githubUrl: "https://github.com/owaisraza72/Elegance_Luxury",
+  },
+  {
+    title: "Healthcare SaaS Platform",
+    description:
+      "Built a full-stack MERN healthcare management system with role-based dashboards, secure REST APIs, and JWT authentication. Implemented RBAC and scalable architecture to optimize clinic workflows and simulate a SaaS-based solution.",
+    tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
+    image: "/clinic.png",
+    liveUrl: "https://final-hackathoon.vercel.app/",
+    githubUrl: "https://github.com/owaisraza72/Final_Hackathoon",
   },
   {
     title: "PitchCraft AI",
     description:
-      "Pitch Craft is a complete frontend web application developed during a hackathon and present project ideas through a modern and responsive interface.",
+      "Developed an AI-powered startup pitch generator using React and Supabase, enabling users to generate structured business ideas with a clean and responsive UI.",
     tech: ["React", "Tailwind CSS", "Supabase"],
     image: "/pitch.png",
     liveUrl: "https://frontend-hackathoon.vercel.app/",
     githubUrl: "https://github.com/owaisraza72/Frontend-Hackathoon",
-  },
-  {
-    title: "E-Commerce Web Application",
-    description:
-      "E-Commerce Web Application built with Next.js and Tailwind CSS.",
-    tech: ["Next.Js", "Tailwind CSS", "App Routes"],
-    image: "/rz.png",
-    liveUrl: "#",
-    githubUrl: "https://github.com/owaisraza72",
   },
 ];

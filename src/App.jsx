@@ -6,6 +6,7 @@ import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Contact from "./sections/Contact";
+import FloatingWhatsApp from "./components/FloatingWhatsApp";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Contact />
         </main>
         <Footer />
+        <FloatingWhatsApp />
       </div>
     </>
   );

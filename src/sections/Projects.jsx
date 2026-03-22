@@ -152,7 +152,7 @@ export default function Projects() {
                   {/* Tech Stack */}
                   <div className="mt-auto pt-6 border-t border-white/10">
                     <div className="flex flex-wrap gap-2">
-                      {project.tech.slice(0, 3).map((tech, i) => (
+                      {project.tech.slice(0, 4).map((tech, i) => (
                         <span
                           key={i}
                           className="text-xs font-medium px-3 py-1.5 rounded-full bg-white/5 text-slate-300 hover:bg-white/10 hover:text-white transition-all duration-300"

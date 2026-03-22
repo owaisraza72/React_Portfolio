@@ -320,7 +320,7 @@ export default function Navbar() {
                     },
                     {
                       icon: <Mail size={18} />,
-                      href: `mailto:${personalInfo.email}`,
+                      href: personalInfo.email,
                       color: "hover:text-primary-400",
                     },
                   ].map(
@@ -329,7 +329,7 @@ export default function Navbar() {
                         <motion.a
                           key={idx}
                           href={social.href}
-                          target={idx !== 2 ? "_blank" : undefined}
+                          target={idx !== 3 ? "_blank" : undefined}
                           rel="noopener noreferrer"
                           whileHover={{ scale: 1.1, y: -2 }}
                           whileTap={{ scale: 0.95 }}

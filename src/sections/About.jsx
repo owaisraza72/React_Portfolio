@@ -54,33 +54,13 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6 text-justify"
           >
-            <p className="text-lg text-slate-300 leading-relaxed">
-              I am a{" "}
-              <strong className="text-white">
-                frontend-focused MERN stack developer
-              </strong>{" "}
-              with a strong foundation in building modern, scalable, and
-              responsive web applications using{" "}
-              <strong className="text-white">
-                React, Tailwind CSS, and JavaScript
-              </strong>
-              .
-            </p>
+          <p className="text-lg text-slate-300 leading-relaxed">
+            I am a results-driven <strong className="text-white">Full Stack (MERN) Developer</strong> focused on crafting high-quality web experiences. With expertise in <strong className="text-white">MongoDB, Express, React, and Node.js</strong>, I build scalable applications that combine seamless frontend interfaces with robust backend logic.
+          </p>
 
-            <p className="text-lg text-slate-300 leading-relaxed">
-              Currently, I am expanding my backend expertise by working with{" "}
-              <strong className="text-white">
-                MongoDB, Mongoose, Express, and JWT-based authentication
-              </strong>
-              , focusing on clean architecture, secure APIs, and scalable
-              application structures.
-            </p>
-
-            <p className="text-lg text-slate-300 leading-relaxed">
-              I enjoy crafting smooth user experiences, writing clean and
-              maintainable code, and following best practices to build
-              applications that are both technically strong and user-focused.
-            </p>
+          <p className="text-lg text-slate-300 leading-relaxed">
+            My strengths lie in building secure <strong className="text-white">JWT-based authentication</strong>, designing efficient <strong className="text-white">RESTful APIs</strong>, and managing complex databases. I prioritize clean code and performance, ensuring every application is maintainable and ready for scale.
+          </p>
           </motion.div>
         </div>
       </div>

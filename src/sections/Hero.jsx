@@ -69,13 +69,11 @@ export default function Hero() {
 
             {/* Main Heading */}
             <motion.div variants={item}>
-              <h1 className="text-5xl md:text-6xl font-bold text-white mb-6 leading-tight">
-                <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
-                  <span className="bg-gradient-to-r from-white to-slate-300 bg-clip-text text-transparent">
-                    Owais
-                  </span>{" "}
-                  <span className="text-primary-400">Raza</span>
-                </h2>
+              <h1 className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight tracking-tight">
+                <span className="bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                  Owais
+                </span>{" "}
+                <span className="text-primary-400">Raza</span>
               </h1>
             </motion.div>
             {/* Role Animation */}
@@ -83,12 +81,13 @@ export default function Hero() {
               <div className="text-2xl text-slate-300 font-medium mb-3">
                 <TypeAnimation
                   sequence={[
+                    "Full Stack Developer",
+                    2000,
+                    "MERN Stack Developer",
+                    2000,
                     "Frontend Web Developer",
                     2000,
-                    "React Developer",
-                    2000,
-                    "Learning MERN Stack",
-                    2000,
+
                     "Building Scalable Web Applications",
                     2000,
                   ]}
