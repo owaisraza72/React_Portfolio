@@ -54,13 +54,25 @@ export default function About() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="space-y-6 text-justify"
           >
-          <p className="text-lg text-slate-300 leading-relaxed">
-            I am a results-driven <strong className="text-white">Full Stack (MERN) Developer</strong> focused on crafting high-quality web experiences. With expertise in <strong className="text-white">MongoDB, Express, React, and Node.js</strong>, I build scalable applications that combine seamless frontend interfaces with robust backend logic.
-          </p>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              I am a passionate{" "}
+              <strong className="text-white">
+                Full Stack (MERN) Developer
+              </strong>{" "}
+              with hands-on experience building modern web applications using{" "}
+              <strong className="text-white">
+                MongoDB, Express.js, React, and Node.js
+              </strong>
+              . I enjoy creating responsive user interfaces and developing
+              secure backend systems with{" "}
+              <strong className="text-white">RESTful APIs</strong> and{" "}
+              <strong className="text-white">JWT authentication</strong>.
+            </p>
 
-          <p className="text-lg text-slate-300 leading-relaxed">
-            My strengths lie in building secure <strong className="text-white">JWT-based authentication</strong>, designing efficient <strong className="text-white">RESTful APIs</strong>, and managing complex databases. I prioritize clean code and performance, ensuring every application is maintainable and ready for scale.
-          </p>
+            <p className="text-lg text-slate-300 leading-relaxed">
+              I focus on writing clean, maintainable code and continuously
+              improving my skills by building real-world projects.
+            </p>
           </motion.div>
         </div>
       </div>
