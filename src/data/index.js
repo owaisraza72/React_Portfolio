@@ -18,7 +18,7 @@ export const personalInfo = {
     "Full Stack Developer specializing in the MERN stack. I build scalable, high-performance web applications using React, Next.js, and Node.js, with a focus on clean architecture and robust API integration.",
   email:
     "https://mail.google.com/mail/?view=cm&fs=1&to=owaisrazax.dev@gmail.com",
-  whatsapp: "https://wa.me/92308368390?text=Hello%21%20I%20want%20to%20hire%20you.",
+  whatsapp: "https://wa.me/923083968390?text=Hello%21%20I%20want%20to%20hire%20you.",
   github: "https://github.com/owaisraza72",
   linkedin: "https://linkedin.com/in/owais-raza-a439b033b",
   resume:
