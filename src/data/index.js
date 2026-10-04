@@ -13,21 +13,40 @@ import {
 
 export const personalInfo = {
   name: "Owais Raza",
-  title: "Full Stack Developer",
+  title: "Software Developer",
   summary:
-    "Full Stack Developer specializing in the MERN stack. I build scalable, high-performance web applications using React, Next.js, and Node.js, with a focus on clean architecture and robust API integration.",
-  email:
-    "https://mail.google.com/mail/?view=cm&fs=1&to=owaisrazax.dev@gmail.com",
-  whatsapp: "https://wa.me/923083968390?text=Hello%21%20I%20want%20to%20hire%20you.",
+    "Software Developer focused on full-stack and cross-platform application development. Specialized in the MERN stack, with hands-on industry experience in React Native, WebRTC, SDK integration, and real-world software systems.",
+  email: "mailto:owaisrazax.dev@gmail.com",
+  whatsapp:
+    "https://wa.me/923083968390?text=Hello%21%20I%20want%20to%20hire%20you.",
   github: "https://github.com/owaisraza72",
-  linkedin: "https://linkedin.com/in/owais-raza-a439b033b",
+  linkedin: "https://www.linkedin.com/in/owais-raza-dev/",
   resume:
-    "https://drive.google.com/file/d/1eAl0FQsQr7-EaC9-n1vP0aijszf7ndMa/view?usp=sharing",
+    "https://drive.google.com/file/d/1ODAHQLT5Gm-gV9aMkvTRuG_kcmqwi4mF/view?usp=sharing",
 };
+
+export const experience = [
+  {
+    company: "Coderatory",
+    role: "MERN Stack & Agentic AI Intern",
+    project: "MediaStream Relay",
+    description:
+      "Contributed to MediaStream Relay, a cross-platform real-time media and SDK project with hands-on work in React Native, WebRTC, and SDK integration.",
+    subDescription:
+      "Worked through platform-specific media, signaling, transport, and cross-platform issues across Web and Mobile.",
+    skills: [
+      "React Native",
+      "WebRTC",
+      "SDK Integration",
+      "Cross-Platform",
+    ],
+  },
+];
 
 export const navLinks = [
   { name: "Home", href: "#home" },
   { name: "About", href: "#about" },
+  { name: "Experience", href: "#experience" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -41,10 +60,11 @@ export const skills = [
       "React.js",
       "Next.js",
       "JavaScript (ES6+)",
+      "TypeScript",
       "Tailwind CSS",
-      "HTML5 & CSS3",
     ],
   },
+
   {
     category: "Backend",
     icon: Terminal,
@@ -53,18 +73,26 @@ export const skills = [
       "Express.js",
       "REST API Development",
       "JWT Authentication",
-      "API Integration",
+      "RBAC",
     ],
   },
+
   {
-    category: "Database & Cloud",
-    icon: Database,
-    items: ["MongoDB", "Supabase", "Cloudinary", "Docker"],
+    category: "Mobile & Real-Time",
+    icon: Code2,
+    items: [
+      "React Native",
+      "WebRTC",
+      "SDK Integration",
+      "Cross-Platform Development",
+      "AI & Workflow Automation", 
+    ],
   },
+
   {
-    category: "Deployment & Tools",
-    icon: Wrench,
-    items: ["Vercel","Railway","Git & GitHub", "Postman", "VS Code"],
+    category: "Database & Tools",
+    icon: Database,
+    items: ["MongoDB", "Supabase", "Docker", "Git & GitHub", "Postman"],
   },
 ];
 export const projects = [
@@ -86,13 +114,14 @@ export const projects = [
     githubUrl: "https://github.com/owaisraza72/Elegance_Luxury",
   },
   {
-    title: "Healthcare SaaS Platform",
+    title: "Clinic OS SaaS Platform",
     description:
       "Built a full-stack MERN healthcare management system with role-based dashboards, secure REST APIs, and JWT authentication. Implemented RBAC and scalable architecture to optimize clinic workflows and simulate a SaaS-based solution.",
     tech: ["MongoDB", "Express.js", "React.js", "Node.js"],
     image: "/clinic.png",
-    liveUrl: "https://final-hackathoon.vercel.app/",
-    githubUrl: "https://github.com/owaisraza72/Final_Hackathoon",
+    liveUrl: "https://clinic-os-healthcare-management-sys.vercel.app/",
+    githubUrl:
+      "https://github.com/owaisraza72/clinic-os-healthcare-management-system",
   },
   {
     title: "PitchCraft AI",

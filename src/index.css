@@ -40,3 +40,26 @@
     @apply bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400;
   }
 }
+
+/* Custom cursor: hide native cursor on desktop/mouse while preserving on inputs and textareas */
+@media (pointer: fine) {
+  body,
+  a,
+  button,
+  [role="button"] {
+    cursor: none;
+  }
+
+  input,
+  textarea,
+  select,
+  [contenteditable="true"] {
+    cursor: auto;
+  }
+
+  :disabled,
+  [disabled],
+  .cursor-not-allowed {
+    cursor: not-allowed;
+  }
+}

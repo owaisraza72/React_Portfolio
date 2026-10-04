@@ -20,7 +20,6 @@ export default function Footer() {
       {/* Gradient Overlay */}
       <div className="absolute mx-auto px-4 sm:px-6 lg:px-8 inset-0 bg-gradient-to-t from-dark-900/30 via-transparent to-transparent" />
 
-
       {/* Bottom Section */}
       <motion.div
         initial="hidden"

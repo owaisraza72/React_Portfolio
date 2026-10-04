@@ -25,6 +25,7 @@ export default function Navbar() {
   const navIcons = {
     home: <Home size={16} />,
     about: <User size={16} />,
+    experience: <Briefcase size={16} />,
     projects: <Briefcase size={16} />,
     skills: <Code size={16} />,
     contact: <Phone size={16} />,

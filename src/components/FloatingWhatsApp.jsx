@@ -12,20 +12,20 @@ export default function FloatingWhatsApp() {
       animate={{ scale: 1, opacity: 1 }}
       whileHover={{ scale: 1.1, y: -5 }}
       whileTap={{ scale: 0.9 }}
-      transition={{ 
-        type: "spring", 
-        stiffness: 260, 
+      transition={{
+        type: "spring",
+        stiffness: 260,
         damping: 20,
-        delay: 1.5 // Show after initial animations
+        delay: 1.5, // Show after initial animations
       }}
       className="fixed bottom-8 right-8 z-[100] group"
       aria-label="Contact on WhatsApp"
     >
       <div className="absolute -inset-2 bg-gradient-to-r from-green-500 to-emerald-500 rounded-full blur opacity-40 group-hover:opacity-60 transition duration-500"></div>
-      
+
       <div className="relative flex items-center justify-center w-16 h-16 bg-[#25D366] text-white rounded-full shadow-2xl overflow-hidden">
         <MessageCircle size={32} />
-        
+
         {/* Ripple effect */}
         <span className="absolute inset-0 rounded-full border-4 border-white/20 animate-ping opacity-0 group-hover:opacity-100"></span>
       </div>

@@ -44,7 +44,6 @@ export default function About() {
             {/* Decorative Border */}
             <div className="absolute top-4 -left-4 w-full h-full border-2 border-primary-500/30 rounded-2xl -z-0" />
           </motion.div>
-
           {/* Right Column: Text */}
           {/* Text Content */}
           <motion.div
@@ -55,25 +54,43 @@ export default function About() {
             className="space-y-6 text-justify"
           >
             <p className="text-lg text-slate-300 leading-relaxed">
-              I am a passionate{" "}
+              I am a <strong className="text-white">Software Developer</strong>{" "}
+              with hands-on experience building{" "}
               <strong className="text-white">
-                Full Stack (MERN) Developer
+                full-stack applications using the MERN stack
               </strong>{" "}
-              with hands-on experience building modern web applications using{" "}
+              along with{" "}
               <strong className="text-white">
-                MongoDB, Express.js, React, and Node.js
+                mobile and cross-platform applications
               </strong>
-              . I enjoy creating responsive user interfaces and developing
-              secure backend systems with{" "}
-              <strong className="text-white">RESTful APIs</strong> and{" "}
-              <strong className="text-white">JWT authentication</strong>.
+              .
             </p>
 
             <p className="text-lg text-slate-300 leading-relaxed">
-              I focus on writing clean, maintainable code and continuously
-              improving my skills by building real-world projects.
+              At <strong className="text-white">Coderatory</strong>, I completed
+              a{" "}
+              <strong className="text-white">
+                MERN Stack &amp; Agentic AI internship
+              </strong>{" "}
+              where I contributed to{" "}
+              <strong className="text-white">MediaStream Relay</strong>, a
+              real-world cross-platform project involving{" "}
+              <strong className="text-white">
+                React Native, WebRTC, SDK integration, and platform-specific
+                debugging
+              </strong>
+              .
             </p>
-          </motion.div>
+
+            <p className="text-lg text-slate-300 leading-relaxed">
+              My work spans{" "}
+              <strong className="text-white">
+                frontend, backend, API integration, authentication, real-time
+                communication, and cross-platform development
+              </strong>
+              , with a focus on building reliable and maintainable software.
+            </p>
+          </motion.div>{" "}
         </div>
       </div>
     </section>
